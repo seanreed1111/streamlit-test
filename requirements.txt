@@ -1,0 +1,5 @@
+streamlit==1.18.1
+openai==0.26.5
+python-dotenv==0.21.0
+tenacity
+tiktoken==0.3.0
