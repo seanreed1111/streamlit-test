@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from openai.embeddings_utils import cosine_similarity
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 from loguru import logger
-
+from langchain.embeddings import OpenAIEmbeddings
 # Load environment variables
 load_dotenv("embedding.env")
 
@@ -23,7 +23,7 @@ EMBEDDING_DEPLOYMENT_NAME=os.getenv('EMBEDDING_DEPLOYMENT_NAME')
 EMBEDDING_ENCODING = 'cl100k_base'
 EMBEDDING_CHUNK_SIZE = 1000
 
-from langchain.embeddings import OpenAIEmbeddings
+
 
 embeddings = OpenAIEmbeddings(
                 openai_api_key=EMBEDDING_API_KEY,
